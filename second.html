@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Higest number</p>
+
+<button onclick="number()">Higest number</button>
+<button onclick=Rohit()>click for name</button>
+<button onclick="namefsize()">Set font size</button>
+<button onclick="sortnum()">Sort number</button>
+<button onclick="namedesc()">names</button>
+<button onclick="random()">randomnumber</button>
+
+<input id="textEmail">
+
+    <button type="button" onclick="email()">Submit</button>
+
+
+<p id="demo"></p>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Date and Time.</button>
+<button onclick="sync()">Text Copy</button>
+
+<p id="demo"></p>
+
+
+<script>
+    function Rohit() {
+  document.getElementById("demo").innerHTML = "Rohit Bukan"
+}
+function number() {
+  document.getElementById("demo").innerHTML = Math.max(5,10,34,345,45,56,78,45,24,45);
+}
+
+function namefsize() {
+  var str = "Rohit";
+  var result = str.fontsize(7);
+  document.getElementById("demo").innerHTML = result;
+}
+function txtcpy() {
+  var x = document.getElementById("myText").value;
+  document.getElementById("demo").innerHTML = x;
+}
+
+function sync()
+    {
+      var n1 = document.getElementById('n1');
+      var n2 = document.getElementById('n2');
+      
+    n2.value = n1.value;
+    }
+
+    var numa = [2,5,3,7,3,6,4,6,7];
+document.getElementById("demo").innerHTML = numa;
+
+function sortnum() {
+  numa.sort();
+  document.getElementById("demo").innerHTML = numa;
+}
+
+
+var names = ["Rohit","Ajay","vijay","Raj","Anil","Sarkar"];
+document.getElementById("demo").innerHTML = names;
+
+function namedesc() {
+ 
+  names.sort();
+  names.reverse();
+  document.getElementById("demo").innerHTML = names;
+}
+
+
+
+function email() {
+        var email;
+
+        email = document.getElementById("textEmail").value;
+
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+            if (reg.test(textEmail.value) == false) 
+            {
+            document.getElementById("demo");
+                document.getElementById("demo").innerHTML ="Invalid EMail ->"+ email;
+                alert('Invalid Email Address ->'+email);
+                return false;
+            } else{
+            document.getElementById("demo").style.color = "DarkGreen";      
+            document.getElementById("demo").innerHTML ="Valid Email ->"+email;
+            }
+
+       return true;
+    }
+
+    function random()
+    {
+      document.getElementById("demo").innerHTML = Math.random();
+    }
+
+    
+</script>
+<input type="text" name="n1" id="n1" onclick="sync()">
+    <input type="text" name="n2" id="n2"/>
+
+</body>
+</html>
