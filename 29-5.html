@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  
+    <body > 
+        <p id="myName">Rohit Bukan</p>
+
+        <select onchange="changeSize(this)">
+            <option value="32">1</option>
+            <option value="24">2</option>
+            <option value="18.72">3</option>
+            <option value="16">4</option>
+            <option value="13.28">5</option>
+            <option value="12">6</option>
+            <option value="10">7</option>
+            <option value="8">8</option>
+            <option value="6">9</option>
+            <option value="4">10</option>
+        </select>
+
+       
+        <script>
+           function changeSize(id){
+               var size = id.value;
+               document.getElementById("myName").style.fontSize = size+"px";
+               
+               }
+               
+           
+        </script>
+    </body>
+</html>

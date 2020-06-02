@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body > 
+       <input id="t" onchange="myFun()"><br/>
+       <span id="s"></span> 
+        <script>
+           function myFun(){
+               var text = document.getElementById("t").value;
+               
+
+               var str = text.toString();
+               
+               if(str.length==0){
+                   document.getElementById("s").innerHTML = "Text box is empty!";
+               }
+           }
+        </script>
+    </body>
+</html>

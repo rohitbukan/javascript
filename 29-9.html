@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    
+    <body > 
+        <input id="t" onchange="myFun()">
+        <br/><span id="s"></span>
+        <script>
+           function myFun(){
+               var text = document.getElementById("t").value;
+               document.getElementById("s").innerHTML= text;
+           }
+        </script>
+    </body>
+</html>

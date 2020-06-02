@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    
+    <body > 
+        <p>Hello.... I am Rohit B. Bukan. I am basically from Osmanabad,currentely live in mumbai.
+            I have done my B.E. from Sinhgad institute of technology lonavala with 61.60 % in Computer Engineering Stream.
+            I have secured 61.06% in Polytechnic and 70.20 in SSC.
+            .</p>
+            <p>I am also two times awarded by letter of appreciation from principal for my hardwork wit regarding to college</p>
+            <p>I am hardworking, self-motivated, passionate about learning new things, quick learner, team player.</p>
+            <p>There are four members in my family including me.
+                First of my respected Father who is Farmer. Then, my lovely mother, she is a Housewife and elder Brother who is also a farmer. </p>
+            
+            
+                <button onclick="myFun()">click here</button>
+            <h1 id="total"></h1>
+        <script>
+           function myFun(){
+               var ele  = document.getElementsByTagName("p");
+               var count = ele.length;
+               for(let i=0;i<count;i++){
+                    ele[i].style.background = "blue";
+               }
+               document.getElementById("total").innerHTML = "number of paragraph tag is "+count;
+           }
+        </script>
+    </body>
+</html>
