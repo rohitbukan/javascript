@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #Name{
+        background-color: blue;
+        color: white;
+    }
+</style>
+<body>
+
+
+<h1 id="name" style="color:red;">Rohit </h1>
+<button type="button" onclick="document.getElementById('name').style.color = 'Blue'">
+  Click Me!</button>
+<h1 id="All">Rohit</h1>
+
+
+<button type="button" onclick="Allign ()">Allign Right</button>
+
+<p id="Name" >Rohit</p>
+<button onclick="myFun()">bgcolor</button><br><br><br>
+
+<input id="myName" onfocus="changeColor()"><br/>
+        <label>red</label>
+        <input type="radio" name="color" value="red"><br/>
+        <label>green</label>
+        <input type="radio" name="color" value="green"><br/>
+        <label>blue</label>
+        <input type="radio" name="color" value="blue"><br/>
+<script>
+function Allign() {
+  document.getElementById("All").style.textAlign = "right";
+}
+function myFun(){
+               document.getElementById("Name").style.color = "blue";
+               document.getElementById("Name").style.backgroundColor="white";
+
+           }
+
+           function changeColor(){
+               
+               var ele = document.getElementsByName("color");
+
+               for(let i=0;i<ele.length;i++){
+                   if(ele[i].checked){
+                       document.getElementById("myName").style.color = ele[i].value;
+                   }
+               }
+           }
+</script>
+</head>
+</body>
+</html>
